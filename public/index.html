@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Chat</h1>
+    <div id="userContainer"></div>
+    <div id="user">
+      <form id="formUser">
+        <input type="text" id="inputUser" /><button>Skriv in ditt namn</button>
+      </form>
+    </div>
+    <div id="message">
+      <form id="formMessage">
+        <input type="text" id="inputMessage" /><button>
+          Skicka ett meddelande
+        </button>
+      </form>
+    </div>
+    <h2>Chat meddelanden</h2>
+    <ul id="messages"></ul>
+
+    <h3>Tärningsspel</h3>
+
+    <h4>Regler:</h4>
+    <p id="rules">
+      Spelaren som först får 21 poäng vinner. May the dice be with you!
+    </p>
+
+    <div id="result">
+      <div id="dice">
+        <img
+          src="https://www.svgrepo.com/show/177192/dice-dice.svg"
+          alt="tärning"
+        />
+      </div>
+      <h4>Tärningskast</h4>
+      <input id="userPlay" type="button" value="Kasta tärningen" />
+      <ul id="resultPlayer1"></ul>
+      <ul id="resultPlayer2"></ul>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
